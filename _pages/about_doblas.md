@@ -1,0 +1,3 @@
+ Ana is the Principal Investigator of the Optical Imaging Research Laboratory (OIRL). Her current research interests are focused on optical engineering, computational optics, and three-dimensional imaging with a special interest in the design of novel microscopic imaging systems and their applications. 
+ 
+ The mission of her lab is to integrate research and education to stimulate interest in Optical Engineering, providing students and the Optics community with a unique set of skills for designing and building future technologies in Optics and Photonics. Since 2012, she has been the author of 40 peer-reviewed scientific journals, her work has been presented at over eighty international conferences, and she is co-inventor of three US patents.

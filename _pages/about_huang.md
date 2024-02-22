@@ -1,0 +1,3 @@
+Xiaolei obtained his PhD in Information Science from the University of Colorado, Boulder. During his PhD, he was a visiting scholar at Johns Hopkins University. He did several internships in both academia and industry. He obtained his MSc and BEng degrees from Chinese Academy of Sciences and Central China Normal University, respectively.
+
+His research is in natural language processing and machine learning, with applications in public health. For example, he has developed surveillance models to understand vaccination and mental health issues via social media and built diagnosis systems for alcoholism. His current research interest is in domain adaptation, user modeling, and cross-lingual transfer learning.
