@@ -19,8 +19,31 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+iTiger is a transformative infrastructure project spearheaded by the Uni-
+versity of Memphis (UofM), in collaboration with regional research institutions
+and industrial partners, including notable entities such as FedEx and Auto-
+Zone. This initiative was born out of a critical need to bridge the significant
+gap in computational resources available to researchers and educators in the re-
+gion, particularly in the fields of artificial intelligence (AI) and high-performance
+computing (HPC).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Prior to the establishment of iTiger, the West Tennessee region, along with
+adjacent areas in Mississippi and Arkansas, has been at a substantial disadvan-
+tage compared to other regions, such as East Tennessee, in terms of accessible
+GPU resources. The available computational infrastructure at UofM and its
+regional counterparts was found to be at least 60% less than that of a single
+R1 university in the East Tennessee region. This disparity not only hindered
+the pace and scope of research but also limited the educational opportunities
+available to students aspiring to work in AI and data science fields.
+iTiger aims to address and overcome these barriers by providing a state-
+of-the-art HPC cluster equipped with the latest in GPU technology, including
+NVIDIA 5000Ada, 6000Ada, and H100. The cluster boasts 152 GPUs, offering
+a quantum leap in processing power, memory, and storage capabilities. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+This setup is designed to support a wide array of research activities across five inter-
+disciplinary research areas: intelligent health, cybersecurity, STEM education
+technology, smart transportation, and computational biology. By facilitating ac-
+cess to such a powerful computational tool, iTiger aims to accelerate research,
+foster innovation, and enable the development of cutting-edge AI and data sci-
+ence methodologies.
+
