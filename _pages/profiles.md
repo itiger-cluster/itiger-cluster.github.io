@@ -1,7 +1,7 @@
 ---
 layout: profiles
 permalink: /people/
-title: people
+title: People & Associates
 description: Our PIs, Co-PIs, Associate Institutions and Assistants
 nav: false
 

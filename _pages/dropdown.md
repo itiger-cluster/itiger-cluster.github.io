@@ -1,8 +1,8 @@
 ---
 layout: page
-title: about
+title: About
 nav: true
-nav_order: 2
+nav_order: 1
 dropdown: true
 children:
   - title: mission
