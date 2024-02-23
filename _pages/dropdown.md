@@ -2,7 +2,7 @@
 layout: page
 title: About
 nav: true
-nav_order: 1
+nav_order: 
 dropdown: true
 children:
   - title: mission
