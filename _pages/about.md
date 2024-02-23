@@ -9,9 +9,8 @@ profile:
   image: memphis_tiger_head_logo.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>University of Memphis</p>
+    <p>Memphis, TN</p>
 
 news: true # includes a list of news items
 latest_posts: true # includes a list of the newest posts
@@ -19,12 +18,16 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-iTiger is a transformative infrastructure project spearheaded by the Uni-
-versity of Memphis (UofM), in collaboration with regional research institutions
-and industrial partners, including notable entities such as FedEx and Auto-
-Zone. This initiative was born out of a critical need to bridge the significant
-gap in computational resources available to researchers and educators in the re-
-gion, particularly in the fields of artificial intelligence (AI) and high-performance
-computing (HPC).
+Welcome to iTiger—a transformative infrastructure initiative led by the Uni-
+versity of Memphis, in collaboration with regional research institutions and
+industry partners. We are committed to bridging the significant gap in compu-
+tational resources in West Tennessee and surrounding region in nearby states.
+Our HPC cluster is equipped with the latest GPU technology, including
+NVIDIA 5000Ada, 6000Ada, and H100, totaling 88 GPUs, offering unprece-
+dented processing power, memory, and storage capabilities. This facility is
+designed to accelerate research, foster innovation, and support the development
+of cutting-edge AI and data science methodologies.
+Explore iTiger, join us in pushing the boundaries of research and education,
+and contribute to the future of technology.
 
 
