@@ -12,7 +12,7 @@ children:
     permalink: /services/
   - title: divider
   - title: our itiger program
-    permalink: /ouritigerprogram/
+    permalink: /people/
   - title: divider
   - title: equipment & resources
     permalink: /equipment&resources/
