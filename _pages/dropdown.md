@@ -1,16 +1,19 @@
 ---
 layout: page
-title: submenus
+title: about
 nav: true
-nav_order: 8
+nav_order: 2
 dropdown: true
 children:
-  - title: publications
-    permalink: /publications/
+  - title: mission
+    permalink: /mission/
   - title: divider
-  - title: projects
-    permalink: /projects/
+  - title: services
+    permalink: /services/
   - title: divider
-  - title: blog
-    permalink: /blog/
+  - title: our itiger program
+    permalink: /ouritigerprogram/
+  - title: divider
+  - title: equipment & resources
+    permalink: /equipment&resources/
 ---
