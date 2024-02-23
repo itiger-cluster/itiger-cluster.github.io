@@ -1,14 +1,14 @@
 ---
 layout: page
-title: guides
+title: Guides/Documentation
 nav: true
-nav_order: 3
+nav_order: 2
 dropdown: true
 children:
   - title: How to Apply
-    permalink: guides/howtoapply/
+    permalink: /howtoapply/
   - title: divider
   - title: User Tutorials
-    permalink: guides/usertutorials/
+    permalink: /usertutorials/
   - title: divider
 ---
