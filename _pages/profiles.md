@@ -8,9 +8,9 @@ nav: false
 profiles:
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
-  - align: left
+  - align: center
     image: xhuang7-big.jpg
-    content:
+    content: about_huang.md
     image_circular: false # crops the image to make it circular
     more_info: >
       <p><a href="https://www.memphis.edu/cs/people/faculty_pages/xiaolei-huang.php">Xiaolei Huang</a></p>
@@ -74,16 +74,4 @@ profiles:
   
 ---
 
-IT Support:
-    Karen A Bell, Chief Info Officer • CIO Information Technology Services
-    Roy A Passman, Dir Enterprise Infra Services • Enterprise Infrastructure Services
-    Kristian Skjervold, Assoc Dir Research Computing • Research Computing
-    Eric John Spangler, System Administrator • Research Computing
-
-Student Associates:
-Guangzeng Han(Phd)
-Weisi Liu (Phd)
-Mayira Sharif(Undergraduate)
-
-Collaborating Institutions:
 
