@@ -8,7 +8,7 @@ nav: false
 profiles:
   # if you want to include more than one profile, just replicate the following block
   # and create one content file for each profile inside _pages/
-  - align: center
+  - align: left
     image: xhuang7-big.jpg
     content: about_huang.md
     image_circular: false # crops the image to make it circular
