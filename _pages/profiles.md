@@ -73,3 +73,17 @@ profiles:
       <p>UMass Dartmouth</p>
   
 ---
+
+IT Support:
+    Karen A Bell, Chief Info Officer • CIO Information Technology Services
+    Roy A Passman, Dir Enterprise Infra Services • Enterprise Infrastructure Services
+    Kristian Skjervold, Assoc Dir Research Computing • Research Computing
+    Eric John Spangler, System Administrator • Research Computing
+
+Student Associates:
+Guangzeng Han(Phd)
+Weisi Liu (Phd)
+Mayira Sharif(Undergraduate)
+
+Collaborating Institutions:
+
