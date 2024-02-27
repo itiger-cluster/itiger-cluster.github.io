@@ -10,7 +10,7 @@ profiles:
   # and create one content file for each profile inside _pages/
   - align: left
     image: xhuang7-big.jpg
-    content: about_huang.md
+    content:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p><a href="https://www.memphis.edu/cs/people/faculty_pages/xiaolei-huang.php">Xiaolei Huang</a></p>
