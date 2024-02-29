@@ -1,3 +1,13 @@
-Dr. Kumar’s research focusses on mobile health (or mHealth). He and his students have developed computational models to infer human health and behavior such as stress, conversation, smoking, craving, brushing, flossing, and cocaine use from wearable sensor data. Dr. Kumar's research works appear in highly-selective publication venues in computer science such as ACM UbiComp, ACM CHI, ACM MobiCom, ACM SenSys, ACM IPSN, ICML, IEEE INFOCOM, and several ACM and IEEE Transactions journals. His publications are widely cited, at an average of 70 citations per article.
+'
 
-Dr. Kumar leads several large multidisciplinary projects in mHealth funded by both National Institutes of Health (NIH) and National Science Foundation (NSF). He currently leads ten federally-funded grants worth over $18 million. It includes multiple R01’s from NIH and a national Center of Excellence on Mobile Sensor Data-to-Knowledge (MD2K) funded by the Big Data-to-Knowledge (BD2K) initiative from NIH that involves over 20 scientists in computing, engineering, behavioral science, and medicine from 12 universities. This is complemented by a $4 million NSF grant from its data cyberinfrastructure program.
+
+
+
+
+
+
+
+<center><p><a href="https://www.memphis.edu/cs/people/faculty_pages/santosh-kumar.php">Santosh Kumar</a></p>
+<p>Co-Principal Investigator</p>
+<p>Computer Science Dept.</p>
+<p>University of Memphis</p></center>
