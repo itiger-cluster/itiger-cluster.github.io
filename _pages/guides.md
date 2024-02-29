@@ -10,5 +10,4 @@ children:
   - title: divider
   - title: User Tutorials
     permalink: /usertutorials/
-  - title: divider
 ---

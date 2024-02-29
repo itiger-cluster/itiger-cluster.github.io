@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+  <div class="container-fluid">
+  <figure class="figure">
+  <img src="https://trust-nlp.github.io/assets/img/compute_node_table-480.webp" class="figure-img img-fluid">
+  <figcaption class="figure-caption text-right">Compute Node Specifications</figcaption>
+  </figure>
+  <figure class="figure">
+  <img src="https://trust-nlp.github.io/assets/img/head_login_node_table-480.webp" class="figure-img img-fluid">
+  <figcaption class="figure-caption text-right">Compute Node Specifications</figcaption>
+  </figure>
+
+  <article>
+    {{ content }}
+  </article>
+
+  {% if page.related_publications %}
+    <h2>References</h2>
+    <div class="publications">
+      {% bibliography --cited_in_order %}
+    </div>
+  {% endif %}
+
+  {% if site.giscus and page.giscus_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
+</div>

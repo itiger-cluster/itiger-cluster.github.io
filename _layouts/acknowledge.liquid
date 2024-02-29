@@ -6,14 +6,21 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>
   </header>
-  <div class="container px-5 py-5"> 
-    <div class="row"> 
-      <center><div class="col mx-1"><img src="https://nsf.widen.net/content/txvhzmsofh/png/NSF_Official_logo_High_Res_1200ppi?u=rpch1x&position=c&quality=80" class="img-fluid"></div></center> 
-    </div>
-    </div>
-  <article>
+
+  <div class="container">
+		<div class='row'>
+		<h2 class="text-center">Building a GPU Cluster to Benefit the Mid-South</h2>
+		<div class="col-md-6">
+		<article>
     {{ content }}
-  </article>
+    </article>
+		</div>
+		<div class="col-md-6">
+		<img src="https://nsf.widen.net/content/txvhzmsofh/png/NSF_Official_logo_High_Res_1200ppi?u=rpch1x&position=c&quality=80" class="img-fluid">
+		</div>
+		</div>
+  </div>
+
 
   {% if page.related_publications %}
     <h2>References</h2>
