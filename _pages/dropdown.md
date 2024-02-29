@@ -8,15 +8,15 @@ children:
   - title: About Us
     permalink: /about/
   - title: divider
-  - title: mission
+  - title: Mission
     permalink: /mission/
   - title: divider
-  - title: services
+  - title: Services
     permalink: /services/
   - title: divider
-  - title: our itiger program
+  - title: Our iTiger Program
     permalink: /people/
   - title: divider
-  - title: equipment & resources
+  - title: Equipment & Resources
     permalink: /equipment&resources/
 ---
