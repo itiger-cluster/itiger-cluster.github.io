@@ -1,3 +1,13 @@
-Dr. Vasile Rus joined the Department of Computer Science at the University of Memphis in 2004. He is also a member of the Institute for Intelligent Systems at the University of Memphis. Before that, Dr. Rus was an Assistant Professor at Indiana University (2003-2004).
+'
 
-Dr. Rus conducts state-of-the-art research and teaching in the area of language and information processing. He has been exploring fundamental topics such as natural language based knowledge representations, semantic similarity, and question answering as well as applications such as intelligent tutoring systems and software defect knowledge management. He has been a Principal Investigator or co-Principal Investigator on awards totaling more than $20 million. Dr. Rus has published more than 150 scientific articles in premier peer-reviewed international conferences and journals, as well as book chapters. 
+
+
+
+
+
+
+
+<center><p><a href="https://www.memphis.edu/cs/people/faculty_pages/xiaolei-huang.php">Vasile Rus</a></p>
+     <p>Co-Principal Investigator</p>
+     <p>Computer Science Dept.</p>
+     <p>University of Memphis</p></center>
