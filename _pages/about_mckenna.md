@@ -1,3 +1,13 @@
-Dr. McKenna studies beetle systematics, genomics, evolution & diversity. Specific interests include the phylogeny and evolution of beetles (order Coleoptera) and other insects, the evolution and genomic basis of plant-feeding, and interactions between beetles and plants on ecological and evolutionary time scales. Other interests include the evolution of insect genomes, and geographic patterns of insect (especially beetle) diversity and endemism.
+'
 
- Dr. McKenna leads the 1,000 Weevils Phylogeny and Evolution Project (1K Weevils) and is a collaborator on the 1,000 Insect Transcriptome Evolution Project (1KITE) and the Insect 5,000 Genomes Project (i5k). He is involved in studies of insect biodiversity in Central and South America, Africa, and Australia. Dr. McKenna is a member of the Association for Tropical Biology and Conservation, Entomological Society of America, Society for the Study of Evolution, Coleopterist's Society, and Council on Undergraduate Research.
+
+
+
+
+
+
+
+<center><p><a href="https://www.memphis.edu/biology/people/faculty/duane-mckenna.php">Duane Mckenna</a></p>
+<p>Co-Principal Investigator</p>
+<p>Biology Dept.</p>
+<p>University of Memphis</p></center>

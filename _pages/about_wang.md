@@ -1,3 +1,13 @@
-Dr. Wang's research focuses on improving the scalability, reliability, and security of the Internet. She has received multiple major research grants from NSF, NIST, and DoD as well as several grants from the university. Most recently, she is on a team that received over $15 million from NSF for their "Named Data Networking" project.
+'
 
-As an active member of the research community, she has served on the program committee of more than 50 conferences and workshops. She is also interested in promoting female participation in computer science, co-organizing a "Networking Networking Women" panel at ACM SIGCOMM 2008 and an N2Women dinner at ACM SIGCOMM 2019. She started and has been advising the Women in Computing student chapter at the university.
+
+
+
+
+
+
+
+<center><p><a href="https://www.memphis.edu/cs/people/faculty_pages/lan-wang.php">Lan Wang</a></p>
+<p>Former Co-Principal Investigator</p>
+<p>Computer Science Dept.</p>
+<p>University of Memphis</p></center>

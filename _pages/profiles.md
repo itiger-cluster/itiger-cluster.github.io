@@ -13,10 +13,7 @@ profiles:
     content: about_huang.md
     image_circular: false # crops the image to make it circular
     more_info: >
-      <p><a href="https://www.memphis.edu/cs/people/faculty_pages/xiaolei-huang.php">Xiaolei Huang</a></p>
-      <p>Principal Investigator</p>
-      <p>Computer Science Dept.</p>
-      <p>University of Memphis</p>
+
   - align: left
     image: vrus-big.jpg
     content: about_rus.md
