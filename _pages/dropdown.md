@@ -11,9 +11,6 @@ children:
   - title: Mission
     permalink: /mission/
   - title: divider
-  - title: Services
-    permalink: /services/
-  - title: divider
   - title: Our iTiger Program
     permalink: /people/
   - title: divider
