@@ -5,6 +5,9 @@ nav: true
 nav_order: 2
 dropdown: true
 children:
+  - title: About Us
+    permalink: /about/
+  - title: divider
   - title: mission
     permalink: /mission/
   - title: divider
