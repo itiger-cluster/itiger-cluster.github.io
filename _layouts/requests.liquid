@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+  <h1>Account Requests</h1>
+  <iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=6loUrrLNakSwWnhY3eXdurFRD2NfemVHsju8EOO7Zs1URENSVzZNREJSV0NXMTg5NTZQM01LMlQ4Mi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+  <article>
+    {{ content }}
+  </article>
+
+  {% if page.related_publications %}
+    <h2>References</h2>
+    <div class="publications">
+      {% bibliography --cited_in_order %}
+    </div>
+  {% endif %}
+
+  {% if site.giscus and page.giscus_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
+</div>
