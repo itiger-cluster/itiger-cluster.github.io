@@ -5,52 +5,6 @@ title: Committee and Team
 description: Our PIs, Co-PIs, Associate Institutions and Assistants
 nav: false
 
-profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
-  - align: left
-    image: xhuang7-big.jpg
-    content: about_huang.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-
-  - align: left
-    image: vrus-big.jpg
-    content: about_rus.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-
-  - align: left
-    image: santosh_kumar.jpg
-    content: about_kumar.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-     
-  - align: left
-    image: mckenna.jpg
-    content: about_mckenna.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-     
-  - align: left
-    image: preza.jpg
-    content: about_preza.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-     
-  - align: left
-    image: lanwang-big.jpg
-    content: about_wang.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      
-  - align: left
-    image: ana_doblas2019.jpg
-    content: about_doblas.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      
-  
 ---
 
 
