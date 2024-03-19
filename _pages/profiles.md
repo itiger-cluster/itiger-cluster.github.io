@@ -1,7 +1,7 @@
 ---
 layout: profiles
-permalink: /people/
-title: People & Associates
+permalink: /committee-and-team/
+title: Committee and Team
 description: Our PIs, Co-PIs, Associate Institutions and Assistants
 nav: false
 

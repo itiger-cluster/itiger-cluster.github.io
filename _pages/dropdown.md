@@ -11,8 +11,8 @@ children:
   - title: Mission
     permalink: /mission/
   - title: divider
-  - title: Our iTiger Program
-    permalink: /people/
+  - title: Committee And Team
+    permalink: /committee-and-team/
   - title: divider
   - title: Equipment & Resources
     permalink: /equipment&resources/
