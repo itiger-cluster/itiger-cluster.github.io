@@ -39,7 +39,7 @@ layout: default
     {% endif %}
 
     <div class="clearfix">{{ content }}</div>
-    <center><button class="btn btn-primary">Sign Up</button></center>
+    <center><a class="btn btn-primary" href="{{ '/requests/' | relative_url }}">Sign Up</a></center>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
