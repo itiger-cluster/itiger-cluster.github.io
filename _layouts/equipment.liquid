@@ -7,12 +7,102 @@ layout: default
     <p class="post-description">{{ page.description }}</p>
   </header>
 
-  <div class="container">
-   <center><img src="https://itiger-cluster.github.io/assets/img/head_node-480.webp" class="img-fluid"></center>
-   <center><p>Head Node + Login Node Specifications</p></center>
-   <center><img src="https://itiger-cluster.github.io/assets/img/compute_node-480.webp" class="img-fluid"></center>
-   <center><p>Compute Node Specifications</p></center>
-  </div>
+  <div class="container" width="50vw">
+    <center><table class="table table-striped" width="50vw">
+  <thead class="bg-primary">
+    <tr>
+      <th scope="col">Specifications</th>
+      <th scope="col">Head Node</th>
+      <th scope="col">Login Node</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Processing/CPU</th>
+      <td>32-core</td>
+      <td>32-core</td>
+    </tr>
+    <tr>
+      <th scope="row">Memory/RAM</th>
+      <td>256GB</td>
+      <td>256GB</td>
+    </tr>
+    <tr>
+      <th scope="row">Storage</th>
+      <td>SSD: 384TB, HDD: 20TB</td>
+      <td>HDD: 20TB</td>
+    </tr>
+    <tr>
+      <th scope="row">Ethernet</th>
+      <td colspan="2">1x NVIDIA InfiniBand HDR 200GbE Adapter + 200Gbps DAC Cable</td>
+    </tr>
+    <tr>
+      <th scope="row">OS</th>
+      <td colspan="2">Rocky Linux</td>
+    </tr>
+    <tr>
+      <th scope="row">Software</th>
+      <td>OpenHPC Cluster Management</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+<hr/>
+    <table class="table table-striped">
+  <thead class="bg-primary">
+    <tr>
+      <th scope="col">Specifications</th>
+      <th scope="col">GPU Compute Node 1</th>
+      <th scope="col">GPU Compute Node 2</th>
+      <th scope="col">GPU Compute Node 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Number of Nodes</th>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th scope="row">Processing/CPU</th>
+      <td>64-core</td>
+      <td>64-core</td>
+      <td>64-core</td>
+    </tr>
+    <tr>
+      <th scope="row">Memory/RAM</th>
+      <td>768GB</td>
+      <td>512GB</td>
+      <td>512GB</td>
+    </tr>
+    <tr>
+      <th scope="row">Storage</th>
+      <td>SSD: 15TB</td>
+      <td>SSD: 15TB</td>
+      <td>SSD: 15TB</td>
+    </tr>
+    <tr>
+      <th scope="row">GPU</th>
+      <td>8x NVIDIA H100 80GB</td>
+      <td>8x NVIDIA RTX 6000 Ada 48GB</td>
+      <td>8x NVIDIA RTX 5000 Ada 32GB</td>
+    </tr>
+    <tr>
+      <th scope="row">Ethernet</th>
+      <td colspan="3">1x NVIDIA InfiniBand HDR 200GbE Adapter + 200Gbps DAC Cable</td>
+    </tr>
+    <tr>
+      <th scope="row">OS</th>
+      <td colspan="3">Rocky Linux</td>
+    </tr>
+    <tr>
+      <th scope="row">Software</th>
+      <td colspan="3">OpenHPC Cluster Management</td>
+    </tr>
+  </tbody>
+</table></center>
+</div>
   <article>
     {{ content }}
   </article>
