@@ -10,7 +10,9 @@ The mission of iTiger extends beyond merely providing hardware resources;
 it encompasses a broader vision of fostering interdisciplinary collaboration, enhancing research quality and productivity, and cultivating a highly skilled workforce in AI research, HPC management, and regional industry.
 iTiger is committed to:
 <ul>
-<li><strong>Empowering Research and Innovation:</strong> By offering unparalleled computational resources, iTiger enables researchers to undertake more ambitious
+<li><strong>Empowering Research and Innovation:</strong> iTiger provides a state-
+of-the-art HPC cluster equipped with the latest in GPU technology, including
+NVIDIA 5000Ada, 6000Ada, and H100. The cluster boasts 88 GPUs. By offering unparalleled computational resources, iTiger enables researchers to undertake more ambitious
 projects, explore new frontiers in AI and data science, and contribute to
 groundbreaking discoveries across multiple disciplines.</li>
 
@@ -27,5 +29,6 @@ diversity, iTiger aims to broaden participation in computing and technology fiel
 supports initiatives designed to remove barriers to entry and to create a
 more inclusive and equitable technology sector.</li>
 </ul>
+
 
 

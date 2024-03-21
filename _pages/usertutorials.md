@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 permalink: /usertutorials/
 title: User Tutorials
 description:
