@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 permalink: /howtoapply/
 title: How To Apply
 description: 
