@@ -1,19 +1,25 @@
 ---
 layout: distill
-title: Creating an Account
-description: how to set up your account on the HPC
-tags: getting started
+title: Blank
+description: blank 
+tags: distill formatting
 giscus_comments: true
-date: 2024-03-26
-featured: true
+date: 2021-05-22
+
 
 authors:
-  - name: Weisi Liu
+  - name: Albert Einstein
+    url: "https://en.wikipedia.org/wiki/Albert_Einstein"
     affiliations:
-      name: University of Memphis
-  - name: Mayira Sharif
+      name: IAS, Princeton
+  - name: Boris Podolsky
+    url: "https://en.wikipedia.org/wiki/Boris_Podolsky"
     affiliations:
-      name: University of Memphis
+      name: IAS, Princeton
+  - name: Nathan Rosen
+    url: "https://en.wikipedia.org/wiki/Nathan_Rosen"
+    affiliations:
+      name: IAS, Princeton
 
 bibliography: 2018-12-22-distill.bib
 
@@ -24,7 +30,7 @@ bibliography: 2018-12-22-distill.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: Completing the form
+  - name: Equations
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
@@ -55,43 +61,34 @@ _styles: >
   }
 ---
 
-## Completing the Form
+## Equations
 
-Hello, and thank you for your interest in iTiger! Begin the process of gaining access to the iTiger HPC, you must begin with filling out the form found on [requests page]("https://itiger-cluster.github.io/requests/"). Note that the form is different for internal and external users (in this case, "internal" means you are affiliated with the University of Memphis and "external" means you are not affiliated).
+This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
+You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
+If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
 
-Please wait for 2 - 5 business days to recieve a response from the University of Memphis IT department.
+To use display mode, again surround your expression with `$$` and place it as a separate paragraph.
+Here is an example:
 
+$$
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+$$
 
+Note that MathJax 3 is [a major re-write of MathJax](https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html) that brought a significant improvement to the loading and rendering speed, which is now [on par with KaTeX](http://www.intmath.com/cg5/katex-mathjax-comparison.php).
 
 ---
 
-## Setting up Software / Terminal
+## Citations
 
-Once you have recieved an email from IT, your next steps are to set up your device to connect to the HPC.
+Citations are then used in the article body with the `<d-cite>` tag.
+The key attribute is a reference to the id provided in the bibliography.
+The key attribute can take multiple ids, separated by commas.
 
-<strong>For External Users:</strong>
- If you are an external user, it is important to know that the only way to access the UofM HPC is by being connected to the University of Memphis network by VPN. Setting up this VPN is relatively simple--follow these [tutorials](https://www.memphis.edu/umtech/solutions/vpn.php) provided by the University of Memphis.
+The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).
+If you have an appendix, a bibliography is automatically created and populated in it.
 
-
-<strong>For Windows Users:</strong>
- In order to access the HPC, you must download either [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) and [mobaXterm](https://mobaxterm.mobatek.net/)
-
-
- <strong>For Linux and MacOS:</strong>
- You can gain access by logging in with "ssh" via the terminal or shell:
-
-````markdown
-ssh [username]@hpclogin.memphis.edu
-````
-```` markdown
-ssh [username]@bigblue.memphis.edu
-````
-In addition, X2Go works on both MacOS and Windows. Here is how to connect to the HPC:
-<ul>
-<li>Host: hpclogin.memphis.edu</li>
-<li>Login: username[your UofM username]</li>
-<li>SSH Port: 22</li>
-<li>Session Type: XFCE</li>
+Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
+However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.
 
 ---
 
