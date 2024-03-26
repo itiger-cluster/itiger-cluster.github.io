@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /tutorials/
+permalink: /blog/
 title: User Tutorials
 description:
 
