@@ -9,5 +9,5 @@ children:
     permalink: /howtoapply/
   - title: divider
   - title: User Tutorials
-    permalink: /blog/
+    permalink: /tutorials/
 ---
