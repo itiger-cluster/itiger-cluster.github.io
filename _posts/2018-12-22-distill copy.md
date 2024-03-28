@@ -1,25 +1,17 @@
 ---
 layout: distill
-title: Blank
-description: blank 
-tags: distill formatting
+title: Basic SLURM Commands and Terminology
+description: these commands will help you with jobs and analytics 
+tags: user-tutorials
 giscus_comments: true
 date: 2021-05-22
 
 
 authors:
-  - name: Albert Einstein
-    url: "https://en.wikipedia.org/wiki/Albert_Einstein"
+  - name: Mayira Sharif
     affiliations:
-      name: IAS, Princeton
-  - name: Boris Podolsky
-    url: "https://en.wikipedia.org/wiki/Boris_Podolsky"
-    affiliations:
-      name: IAS, Princeton
-  - name: Nathan Rosen
-    url: "https://en.wikipedia.org/wiki/Nathan_Rosen"
-    affiliations:
-      name: IAS, Princeton
+      name: University of Memphis
+
 
 bibliography: 2018-12-22-distill.bib
 
@@ -30,12 +22,12 @@ bibliography: 2018-12-22-distill.bib
 #   - we may want to automate TOC generation in the future using
 #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
-  - name: Equations
+  - name: Basic SLURM Commands
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Citations
+  - name: Squeue, Sacct
   - name: Footnotes
   - name: Code Blocks
   - name: Interactive Plots
@@ -61,7 +53,7 @@ _styles: >
   }
 ---
 
-## Equations
+## Basic SLURM commands
 
 This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
 You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
