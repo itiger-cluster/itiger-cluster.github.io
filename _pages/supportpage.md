@@ -5,4 +5,4 @@ title: Support
 description:
 ---
 
-Page will be updated soon.
+There are many resources coming soon to help assist you.
