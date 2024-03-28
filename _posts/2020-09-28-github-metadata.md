@@ -1,39 +1,33 @@
 ---
 layout: post
-title: a post with github metadata
-date: 2020-09-28 21:01:00
-description: a quick run down on accessing github metadata.
+title: Submitting Jobs (Slurm)
+date: 2024-03-28 15:00:00
+description: how to submit jobs
 tags: metadata
 categories: sample-posts external-services
 ---
 
-A sample blog page that demonstrates the accessing of github meta data.
+Running jobs on HPC requires submitting your jobs to the job scheduler as
+either Batch (through a submission script) or Interactively. The scheduler will
+find the resources you requested and will execute your job on those resource
+when they become available.
 
-## What does Github-MetaData do?
+## Minimum Requirements for Slurm Scripts:
 
-- Propagates the site.github namespace with repository metadata
-- Setting site variables :
-  - site.title
-  - site.description
-  - site.url
-  - site.baseurl
-- Accessing the metadata - duh.
-- Generating edittable links.
+- Partition ('-partition', 'p')
+- CPUs, tasks, or nodes: 'cpus-per-task' or '-c' for multiple threads/cores per node/task (pthreads/OpenMP): '-ntasks' or '-n' for multiple message passing tasks (MPI); '-nodes' or '-N' for multiple nodes (MPI)
+- Time ('-time' or '-t')
+- Memory ('mem-per-cpu' for memory per CPU core; '-mem' for memory per node)
+<strong>Useful options</strong>
+- Job name ('-job-name' or '-J') for identification
+- Output and error ('-output' or '-o' and '-error' or '-e') to redirect script standard output and error ('stdout' and 'stderr')
+- Generic RESource (-gres') used for gpus, licenses, and interconnects
 
-## Additional Reading
+Here's an example of how your bash script should look like:
 
-- If you're recieving incorrect/missing data, you may need to perform a Github API<a href="https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md"> authentication</a>.
-- Go through this <a href="https://jekyll.github.io/github-metadata/">README</a> for more details on the topic.
-- <a href= "https://github.com/jekyll/github-metadata/blob/master/docs/site.github.md">This page</a> highlights all the feilds you can access with github-metadata.
-  <br />
+<div class="row mt-3">
+    <center><div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/bash_example.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </center>
+    </div>
 
-## Example MetaData
-
-- Host Name : {{ site.github.hostname }}
-- URL : {{ site.github.url }}
-- BaseURL : {{ site.github.baseurl }}
-- Archived : {{ site.github.archived}}
-- Contributors :
-  {% for contributor in site.github.contributors %}
-  - {{ contributor.login }}
-    {% endfor %}
