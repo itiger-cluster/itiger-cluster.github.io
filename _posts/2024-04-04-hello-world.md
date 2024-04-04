@@ -24,8 +24,11 @@ To start, open up an IDE of your choice and write code that will output "Hello W
 
 Next, upload your file onto the HPC. Depending on your system/OS, you may have to follow different steps to put your file onto the HPC. For that, follow this [tutorial]({% post_url 2015-05-15-images %})
 
+<br/>
 
 Next, we must create a basic BASH file to submit to the HPC. The BASH file acts as sort of a set of instructions for the HPC, including what resources the HPC will provide, the length of the job we shall submit, the modules we will need for the job (in this case, python 3.8.7) and the file we will run ( our python file ).
+
+<br/>
 
 After we include the right instructions into our BASH file, we are now able to upload/add it to our preferred directory of the HPC and use the command `sbatch` to begin the job. Once the job has submitted and finished, you should recieve an output file within your directory--this contains the "hello world" output you'd typically see on your terminal.
 
