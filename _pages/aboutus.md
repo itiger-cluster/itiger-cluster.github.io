@@ -6,7 +6,10 @@ description:
 
 ---
 
-<strong>Who We Are:</strong>Tiger is a transformative infrastructure project spearheaded by the University of Memphis, in collaboration with regional research institutions and
-industrial partners. This initiative was born out of a critical need to bridge the
-significant gap in computational resources available to researchers and educators
-in the region. iTiger is using a state-of-the-art GPU cluster that will allow for both internal and external persons of the University of Memphis. 
+iTiger is a High Performance Computing Cluster based at the University of Memphis, serving researchers and educators in West Tennessee and other regions. This transformative infrastructure project provides a powerful GPU cluster with unprecedented computational capabilities.  
+
+iTiger was established through a collaboration between the University of Memphis, regional research institutions, and industry partners to meet our region's computing resource needs.
+
+With state-of-the-art hardware including the latest NVIDIA GPUs like the 5000Ada, 6000Ada, and H100 models totaling 88 GPUs, iTiger offers unparalleled processing power, memory, and storage to accelerate cutting-edge research, foster innovation, and support the development of advanced AI and data science applications. 
+
+Whether you are affiliated with the University of Memphis or an external organization in other regions, iTiger can provide sufficient computing resources for your research, innovation and education needs.

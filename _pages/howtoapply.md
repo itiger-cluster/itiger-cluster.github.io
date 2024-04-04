@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 permalink: /howtoapply/
 title: How To Apply
 description: 
@@ -22,5 +22,5 @@ In order to gain an account, you must fill out the form linked <a href="https://
 After you submit your form, we will send a request to the University of Memphis IT Department in order to create your account. Once your account is created, we will notify you by email. Please wait between 3 - 5 business days after submitting the form before receiving a response.
 
 <strong>Next Steps?</strong>
-After you recieve your account, your next steps are to install the required software(potentially a VPN as well). You may follow this <a href="https://itiger-cluster.github.io/blog/2024/distill/">link</a> to continue getting started to use the HPC.
+After you recieve your account, your next steps are to install the required software(potentially a VPN as well). You may follow this [link]({% post_url 2024-03-26-account %}) to continue getting started to use the HPC.
 

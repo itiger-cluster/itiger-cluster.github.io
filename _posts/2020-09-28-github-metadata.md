@@ -26,8 +26,8 @@ when they become available.
 Here's an example of how your bash script should look like:
 
 <div class="row mt-3">
-    <center><div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bash_example.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </center>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/bash_example.png" class="img-fluid rounded z-depth-1" zoomable=true %} 
     </div>
+</div>
 

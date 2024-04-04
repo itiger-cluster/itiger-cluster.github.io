@@ -1,7 +1,7 @@
 ---
 layout: equipment
 permalink: /equipment&resources/
-title: Equipment & Resources
+title: Equipment And Resources
 description:
 
 ---
