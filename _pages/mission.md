@@ -17,7 +17,7 @@ projects, explore new frontiers in AI and data science, and contribute to
 groundbreaking discoveries across multiple disciplines.</li>
 
 <li><strong>Enhancing Education:</strong> iTiger is dedicated to enriching the educational
-landscape by providing essential computational resources to regional institution, enhancing STEM education and enabling advanced AI and data
+landscape by providing essential computational resources to regional institutions, enhancing STEM education and enabling advanced AI and data
 science learning opportunities.</li>
 
 <li><strong>Training the Future Workforce:</strong> iTiger is instrumental in preparing students and professionals for careers in AI research, HPC management, and
