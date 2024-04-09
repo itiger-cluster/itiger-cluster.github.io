@@ -21,7 +21,7 @@ To start, open up an IDE of your choice and write code that will output "Hello W
     </div>
 
 
-Next, upload your file onto the HPC. Depending on your system/OS, you may have to follow different steps to put your file onto the HPC. For that, follow this [tutorial](https://itiger-cluster.github.io/blog/2024/images/)
+Next, upload your file onto the HPC. Depending on your system/OS, you may have to follow different steps to put your file onto the HPC. For that, follow this [tutorial]({% post_url 2015-05-15-images %})
 
 <br/>
 <br/>
