@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: memphis_tiger_head_logo.png
+  image: itiger-mascot.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>University of Memphis</p>
