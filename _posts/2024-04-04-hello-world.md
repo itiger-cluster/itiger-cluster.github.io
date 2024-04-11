@@ -28,7 +28,7 @@ Next, upload your file onto the HPC. Depending on your system/OS, you may have t
 
 Next, we must create a basic BASH file to submit to the HPC. The BASH file acts as sort of a set of instructions for the HPC, including what resources the HPC will provide, the length of the job we shall submit, the modules we will need for the job (in this case, python 3.8.7) and the file we will run ( our python file, which in this case is animal.py ).
 
-```scss
+```
 #!/bin/bash
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=acomputeq
@@ -108,7 +108,7 @@ After we include the right instructions into our BASH file, we are now able to u
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/helloworld1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/helloworld2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 
 Open the file in a text editor, and you should see your output!
