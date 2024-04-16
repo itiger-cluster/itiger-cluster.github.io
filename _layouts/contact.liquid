@@ -7,30 +7,37 @@ layout: default
     <p class="post-description">{{ page.description }}</p>
   </header>
 
-  <article>
-    {{ content }}
-  </article>
-
-	<div class="container">
-		<h1> Contact Us! </h1>
+  <div class="container">
 		<form action="https://formsubmit.co/mhsharif@memphis.edu" method="POST">
 		  <div class="form-group">
 		    <label for="FullNameInput">Full Name</label>
-		    <input type="text" class="form-control" id="FullNameInput" placeholder="Enter your full name">
-
+		    <input type="text" name="Name" class="form-control" id="FullNameInput" placeholder="Enter your full name">
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputEmail1">Email address</label>
-		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-		    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+		    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 		  </div>
 		  <div class="form-group">
     		<label for="exampleFormControlTextarea1">Enter Your Message Here</label>
-    		<textarea class="form-control" id="Textarea1" rows="3"></textarea>
+    		<textarea class="form-control" name="message" id="Textarea1" rows="3"></textarea>
   		  </div>
 		  <button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>
 
+  <article>
+    {{ content }}
+  </article>
 
+
+{% if page.related_publications %}
+    <h2>References</h2>
+    <div class="publications">
+      {% bibliography --cited_in_order %}
+    </div>
+  {% endif %}
+
+  {% if site.giscus and page.giscus_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
 </div>
