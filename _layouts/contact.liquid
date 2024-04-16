@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+
+  <article>
+    {{ content }}
+  </article>
+
+	<div class="container">
+		<h1> Contact Us! </h1>
+		<form action="https://formsubmit.co/mhsharif@memphis.edu" method="POST">
+		  <div class="form-group">
+		    <label for="FullNameInput">Full Name</label>
+		    <input type="text" class="form-control" id="FullNameInput" placeholder="Enter your full name">
+
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+		    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+		  </div>
+		  <div class="form-group">
+    		<label for="exampleFormControlTextarea1">Enter Your Message Here</label>
+    		<textarea class="form-control" id="Textarea1" rows="3"></textarea>
+  		  </div>
+		  <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+
+
+</div>
