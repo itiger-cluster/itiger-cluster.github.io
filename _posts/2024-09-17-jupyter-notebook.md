@@ -145,4 +145,6 @@ Now, enter in your credentials, and you should see a window open, looking like a
 
  On the bottom bar, click on the browser option. There, a web browser should open. From there, paste the jupyter link the  `.out` file gave when we submitted that batch script. From there, you should be able to see your jupyter notebook running!
 
+ > Don't forget to close your jupyter notebook instance when you are done. You can do this by running `scancel [your job id]` in the terminal.
+
 ---

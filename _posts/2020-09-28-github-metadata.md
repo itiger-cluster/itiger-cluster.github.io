@@ -3,8 +3,8 @@ layout: post
 title: Submitting Jobs (Slurm)
 date: 2024-03-28 15:00:00
 description: how to submit jobs
-tags: metadata
-categories: sample-posts external-services
+tags: 
+categories: tutorial
 ---
 
 Running jobs on HPC requires submitting your jobs to the job scheduler as
