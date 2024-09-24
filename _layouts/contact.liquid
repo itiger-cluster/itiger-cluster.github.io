@@ -21,7 +21,7 @@ layout: default
     		<label for="exampleFormControlTextarea1">Enter Your Message Here</label>
     		<textarea class="form-control" name="message" id="Textarea1" rows="3"></textarea>
   		  </div>
-		  <button type="submit" class="btn btn-primary">Submit</button>
+		  <button type="submit" onclick="alert('Before submitting, have you checked our Wiki?')" class="btn btn-primary">Submit</button>
 		</form>
 	</div>
 
@@ -29,6 +29,9 @@ layout: default
     {{ content }}
   </article>
 
+<script>
+
+</script>
 
 {% if page.related_publications %}
     <h2>References</h2>

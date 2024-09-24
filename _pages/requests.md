@@ -1,7 +1,7 @@
 ---
 layout: requests
 permalink: /requests/
-title: Account Requests
+title: Registration Requests
 description:
 
 ---
