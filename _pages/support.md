@@ -10,7 +10,4 @@ children:
   - title: divider
   - title: Contact
     permalink: /contact/
-  - title: divider
-  - title: Q&A
-    permalink: /q&a/
 ---

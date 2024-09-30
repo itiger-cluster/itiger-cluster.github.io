@@ -10,4 +10,7 @@ children:
   - title: divider
   - title: User Tutorials
     permalink: /blog/
+  - title: divider
+  - title: Q&A
+    permalink: /q&a/
 ---
