@@ -5,6 +5,9 @@ nav: true
 nav_order: 4
 dropdown: true
 children:
+  - title: How to Apply
+    permalink: /howtoapply/
+  - title: divider
   - title: Registration Requests
     permalink: /requests/
   - title: divider

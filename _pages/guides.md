@@ -5,12 +5,9 @@ nav: true
 nav_order: 3
 dropdown: true
 children:
-  - title: How to Apply
-    permalink: /howtoapply/
-  - title: divider
   - title: User Tutorials
     permalink: /blog/
   - title: divider
-  - title: Q&A
-    permalink: /q&a/
+  - title: Wiki
+    permalink: /wiki/
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /q&a/
-title: Q & A
+permalink: /wiki/
+title: Wiki
 description:
 
 ---
