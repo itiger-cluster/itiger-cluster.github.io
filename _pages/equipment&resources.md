@@ -6,12 +6,12 @@ description:
 
 ---
 
-<h3>Usage Quotas:</h3>
+<h2>Usage Quotas:</h2>
 <ul>
-<li>GPU Quota: 4</li>
-<li>Home Quota: 20GB</li>
-<li>Storage Quota: 200GB</li>
-<li>CPU Quota: 20 cores</li>
+<li><h4>GPU Quota: 4</h4></li>
+<li><h4>Home Quota: 20GB</h4></li>
+<li><h4>Storage Quota: 200GB</h4></li>
+<li><h4>CPU Quota: 20 cores</h4></li>
 </ul>
 
 
