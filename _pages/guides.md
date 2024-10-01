@@ -5,7 +5,7 @@ nav: true
 nav_order: 3
 dropdown: true
 children:
-  - title: User Tutorials
+  - title: HPC Tutorials
     permalink: /blog/
   - title: divider
   - title: Wiki
