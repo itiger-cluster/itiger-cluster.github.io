@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: User Tutorials
+title: HPC Tutorials
 description:
 
 ---
