@@ -8,23 +8,24 @@ description:
 
 <!-- _pages/publications.md -->
 
-iTiger requires users to create accounts in order to gain access. This process entails filling out the Microsoft Form in the Requests page, installing required software--including the UofM VPN if you are an external user--and logging into the HPC. Please read this guide in its entirety.
+# How To Apply 
 
-<strong>What is an Internal or External Applicant?</strong>
-<ul>
-<li>An internal applicant is an applicant who has an affiliation with the University of Memphis. If you are an <strong>internal</strong> applicant, you are either a  <strong>current</strong> student, faculty member or staff member of the University of Memphis.</li>
-<li>An external applicant is a applicant who does <strong>NOT</strong> have an affiliation with the University of Memphis.</li>
-</ul>
+iTiger cluster requires users to create accounts in order to gain access. This process entails filling out a Microsoft Form in the [Registration Requests page](https://itiger-cluster.github.io/requests/). University of Memphis (UofM) provides cybersecurity and privacy protection (e.g., firewall and multi-facot authentication) and requires a UofM account to access its Internet services. If you are not in the university Internet or an external user to access the iTiger cluster, you need to install and use the [UofM VPN](https://www.memphis.edu/umtech/solutions/vpn.php). Please read the following guide. **Disclaimer**: we will try our best to reply to your requests in time. But due to amount of requests and available staff support, please also stay patient.
 
-<strong>How do I Gain An Account?</strong>
-<ol>
-<li>If you are an <strong>internal</strong> applicant,<a href="https://itiger-cluster.github.io/requests/">fill this form.</a></li>
-<li>If you are an <strong>external</strong> applicant, read below:</li>
-</ol>
+## What is an Internal or External Applicant? 
 
+**An internal applicant** is an applicant who has an affiliation with the University of Memphis. If you are an internal applicant, you are either a current student, faculty member or staff member of the University of Memphis. 
 
-As an external applicant, you will need to have an internal UofM user/faculty member offer you a sponsored account. When you have found your faculty member, have them view this <a href="https://memphis.topdesk.net/tas/public/ssp/content/page/knowledgebase?origin=null">link</a> and type <strong>sponsored account</strong> into the search bar. From there, your faculty member can request a sponsored account for you.
+**An external applicant** is a applicant who does NOT have an affiliation with the University of Memphis. To access the cluster, you need to obtain an UofM account. See instructions in the following.
 
-<strong>Next Steps?</strong>
-After you recieve your account, your next steps are to install the required software(potentially a VPN as well). You may follow this [link]({% post_url 2024-03-26-account %}) to continue getting started to use the HPC.
+## How do I Gain An Account? 
+
+If you are an internal applicant or have a UofM account,fill the form in our [Registration Requests page](https://itiger-cluster.github.io/requests/). 
+
+If you are an external applicant, read below: 
+
+As an external applicant, you will need to have an UofM faculty member offer you a sponsored account. When you connect or collaborate with the UofM faculty, have them view the **[IT instruction](https://www.memphis.edu/its/accounts/sponsored.php)** or go to [UofM service desk](https://umhelpdesk.memphis.edu/) type "sponsored account" into the search bar to submit a ticket request. From there, your faculty collaborator can request a sponsored account for you. 
+
+## Next Steps? 
+After you recieve your account, your next steps are to install the required software (potentially a VPN as well). You may follow [this link](https://itiger-cluster.github.io/blog/2024/account/) to continue getting started to use the HPC.
 

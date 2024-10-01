@@ -8,7 +8,7 @@ children:
   - title: How to Apply
     permalink: /howtoapply/
   - title: divider
-  - title: Internal Users
+  - title: Registration Request
     permalink: /requests/
   - title: divider
   - title: Contact
