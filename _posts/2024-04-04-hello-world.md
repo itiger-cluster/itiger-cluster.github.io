@@ -10,7 +10,7 @@ featured: false
 
 <strong>Let's learn how to submit a job to the HPC!</strong>
 
-<strong>Step 1: Write your "hello world" code:</strong>
+
 <br/>
 To start, open up an IDE of your choice and write code that will output "Hello World" into the terminal:
 
@@ -51,9 +51,10 @@ Open the file in a text editor, and you should see your output!
 
 
 
-
+<p align="center">
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/helloworld3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-
+</div>
+</p>
