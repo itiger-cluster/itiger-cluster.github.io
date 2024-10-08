@@ -125,7 +125,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 blog_name: HPC Tutorials # blog_name will be displayed in your blog page
 blog_description: Guides on How to use the HPC
-permalink: /blog/:year/:title/
+permalink: /tutorials/:year/:title/
 
 # Pagination
 pagination:
@@ -268,9 +268,9 @@ jekyll-archives:
     tag: archive-tag
     category: archive-category
   permalinks:
-    year: "/blog/:year/"
-    tag: "/blog/tag/:name/"
-    category: "/blog/category/:name/"
+    year: "/tutorials/:year/"
+    tag: "/tutorials/tag/:name/"
+    category: "/tutorials/category/:name/"
 
 display_tags: ["getting-started", "user-tutorials", "links", "math", "code"] # these tags will be displayed on the front page of your blog
 display_categories: ["blockquotes"] # these categories will be displayed on the front page of your blog
@@ -312,7 +312,7 @@ enable_publication_badges:
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
-  [abbr, abstract, altmetric, arxiv, bibtex_show, blog, code, html, pdf, poster, preview, selected, slides, supp, video, website]
+  [abbr, abstract, altmetric, arxiv, bibtex_show, tutorials, code, html, pdf, poster, preview, selected, slides, supp, video, website]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
 max_author_limit: 3 # leave blank to always show all authors
