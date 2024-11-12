@@ -272,7 +272,7 @@ jekyll-archives:
     tag: "/tutorials/tag/:name/"
     category: "/tutorials/category/:name/"
 
-display_tags: ["getting-started", "user-tutorials", "links", "math", "code"] # these tags will be displayed on the front page of your blog
+ # these tags will be displayed on the front page of your blog
 display_categories: ["blockquotes"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
