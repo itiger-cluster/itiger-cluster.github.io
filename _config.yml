@@ -273,7 +273,7 @@ jekyll-archives:
     category: "/tutorials/category/:name/"
 
  # these tags will be displayed on the front page of your blog
-display_categories: ["blockquotes"] # these categories will be displayed on the front page of your blog
+ # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
