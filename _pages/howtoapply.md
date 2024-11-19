@@ -25,5 +25,5 @@ If you are an external applicant, read below:
 As an external applicant, you will need to have an UofM faculty member offer you a sponsored account. When you connect or collaborate with the UofM faculty, have them view the **[IT instruction](https://www.memphis.edu/its/accounts/sponsored.php)** or go to [UofM service desk](https://umhelpdesk.memphis.edu/) type "sponsored account" into the search bar to submit a ticket request. From there, your faculty collaborator can request a sponsored account for you. 
 
 ## Next Steps? 
-After you recieve your account, your next steps are to install the required software (potentially a VPN as well). You may follow [this link](https://itiger-cluster.github.io/blog/2024/account/) to continue getting started to use the HPC.
+After you recieve your account, your next steps are to install the required software (potentially a VPN as well). You may follow the "Creating an Account" tutorial in the Wiki to continue getting started to use the HPC.
 

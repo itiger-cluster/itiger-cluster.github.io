@@ -3,8 +3,6 @@ layout: post
 title: Submitting a Python Job with Hello World
 date: 2024-04-04 15:00:00
 description: Learn how to submit a job with Python
-tags: getting-started
-categories: tutorial
 featured: false
 ---
 
