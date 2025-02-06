@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://camo.githubusercontent.com/a09122d2e5765106f6c98ac2aeb74f54c4f96a13c3042ddf89e90dcddbb2929c/68747470733a2f2f6974696765722d636c75737465722e6769746875622e696f2f6173736574732f696d672f6974696765722d6d6173636f742d3438302e77656270">
+<img src="https://itiger-cluster.github.io/assets/img/itiger-mascot.png?58ba513c4f35adb70ca5b46133a4f123">
 
 #### A HPC Built for the Mid-South
 
