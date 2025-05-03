@@ -16,4 +16,8 @@ children:
   - title: divider
   - title: Equipment & Resources
     permalink: /equipment&resources/
+  - title: divider
+  - title: Publication
+    permalink: /publication/
+
 ---

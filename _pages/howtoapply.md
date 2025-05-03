@@ -18,11 +18,13 @@ iTiger cluster requires users to create accounts in order to gain access. This p
 
 ## How do I Gain An Account? 
 
-If you are an internal applicant or have a UofM account,fill the form in our [Registration Requests page](https://itiger-cluster.github.io/requests/). 
+If you are an internal applicant or have a UofM account,fill the form in our [Registration Requests page](https://itiger-cluster.github.io/requests/). Select the "Internal applicant" choice.
 
 If you are an external applicant, read below: 
 
 As an external applicant, you will need to have an UofM faculty member offer you a sponsored account. When you connect or collaborate with the UofM faculty, have them view the **[IT instruction](https://www.memphis.edu/its/accounts/sponsored.php)** or go to [UofM service desk](https://umhelpdesk.memphis.edu/) type "sponsored account" into the search bar to submit a ticket request. From there, your faculty collaborator can request a sponsored account for you. 
+
+In addition, fill the form in our [Registration Requests page](https://itiger-cluster.github.io/requests/), but select yourself as an "External" applicant and enter your e-mail.
 
 ## Next Steps? 
 After you recieve your account, your next steps are to install the required software (potentially a VPN as well). You may follow the "Creating an Account" tutorial in the Wiki to continue getting started to use the HPC.
