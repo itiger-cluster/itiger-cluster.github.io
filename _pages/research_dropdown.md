@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research
+title: Research Initiative
 nav: true
 nav_order: 5
 dropdown: true
