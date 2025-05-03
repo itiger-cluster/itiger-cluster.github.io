@@ -13,6 +13,27 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
+
+    <!-- Add your custom CSS here -->
+    <style>
+      body.light .announcements {
+        background-color: rgba(0, 0, 0, 0.1); /* Gray background for light theme */
+        color: var(--global-text-color);
+      }
+
+      body.dark .announcements {
+        background-color: rgba(173, 216, 230, 0.2); /* Light blue background for dark theme */
+        color: var(--global-text-color-dark);
+      }
+
+      .announcements {
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        width: 100%; /* Full width */
+        text-align: center; /* Center the content */
+      }
+    </style>
   </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BL5ZND0Z02"></script>
@@ -23,11 +44,12 @@
 
   gtag('config', 'G-BL5ZND0Z02');
 </script>
-
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
     <!-- Header -->
     {% include header.liquid %}
+  <!--ImportantAnnouncement-->
+    <div class="announcements">🚀iTiger Promotion Month Start! Please Contact us for a Promotion Presentation for Your Class or Seminars.</div>
 
     <!-- Content -->
     <div class="container mt-5" role="main">

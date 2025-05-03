@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-We have started user recruitment efforts, and the cluster has run its first gpu job!
+We have started user recruitment efforts, and the cluster has run its first GPU job!
