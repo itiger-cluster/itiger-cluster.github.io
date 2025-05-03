@@ -1,23 +1,20 @@
 ---
 layout: page
-title: About
+title: Research
 nav: true
-nav_order: 2
+nav_order: 5
 dropdown: true
 children:
-  - title: About Us
-    permalink: /about/
+  - title: Publication List
+    permalink: /publication-list/
   - title: divider
-  - title: Mission
-    permalink: /mission/
+  - title: Citation
+    permalink: /citation/
   - title: divider
-  - title: Committee And Team
-    permalink: /committee-and-team/
+  - title: Report Publication
+    permalink: /report-publication/
   - title: divider
-  - title: Equipment & Resources
-    permalink: /equipment&resources/
-  - title: divider
-  - title: Publication
-    permalink: /publication/
+  - title: Acknowledgement
+    permalink: /acknowledgement/
 
 ---

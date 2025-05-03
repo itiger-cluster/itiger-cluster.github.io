@@ -3,8 +3,6 @@ layout: acknowledge
 permalink: /acknowledgement/
 title: Acknowledgement
 description:
-nav: true
-nav_order: 5
 ---
 
 
