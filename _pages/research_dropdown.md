@@ -8,9 +8,6 @@ children:
   - title: Publication List
     permalink: /publication-list/
   - title: divider
-  - title: Citation
-    permalink: /citation/
-  - title: divider
   - title: Report Publication
     permalink: /report-publication/
   - title: divider
