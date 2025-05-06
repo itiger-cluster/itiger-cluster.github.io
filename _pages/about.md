@@ -28,3 +28,18 @@ Explore iTiger, join us in pushing the boundaries of research and education,
 and contribute to the future of technology.
 
 
+## Citation
+
+If our cluster has assisted your research, please cite us in your work!
+
+```bibtex
+@misc{sharif2025cultivatingmultidisciplinaryresearcheducation,
+      title={Cultivating Multidisciplinary Research and Education on GPU Infrastructure for Mid-South Institutions at the University of Memphis: Practice and Challenge}, 
+      author={Mayira Sharif and Guangzeng Han and Weisi Liu and Xiaolei Huang},
+      year={2025},
+      eprint={2504.14786},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC},
+      url={https://arxiv.org/abs/2504.14786}, 
+}
+```
