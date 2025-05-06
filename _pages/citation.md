@@ -24,7 +24,7 @@ description:
 
 Below is our BibTeX citation for you to cite our paper:
 
-<pre>```bibtex
+<pre>
 @misc{sharif2025cultivatingmultidisciplinaryresearcheducation,
       title={Cultivating Multidisciplinary Research and Education on GPU Infrastructure for Mid-South Institutions at the University of Memphis: Practice and Challenge}, 
       author={Mayira Sharif and Guangzeng Han and Weisi Liu and Xiaolei Huang},
@@ -34,8 +34,7 @@ Below is our BibTeX citation for you to cite our paper:
       primaryClass={cs.DC},
       url={https://arxiv.org/abs/2504.14786}, 
 }
-```</pre>
+</pre>
 
 <pre>
-```
-Sharif, M., Han, G., Liu, W., & Huang, X. (2025). Cultivating Multidisciplinary Research and Education on GPU Infrastructure for Mid-South Institutions at the University of Memphis: Practice and Challenge. arXiv preprint arXiv:2504.14786.```</pre>
+Sharif, M., Han, G., Liu, W., & Huang, X. (2025). Cultivating Multidisciplinary Research and Education on GPU Infrastructure for Mid-South Institutions at the University of Memphis: Practice and Challenge. arXiv preprint arXiv:2504.14786.</pre>
