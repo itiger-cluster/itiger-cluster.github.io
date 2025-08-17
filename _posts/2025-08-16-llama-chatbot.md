@@ -19,14 +19,14 @@ Make sure you are working under the `/project` directory (to avoid `/home` quota
 Then create a dedicated conda environment and install the required libraries:
 
 ```bash
+cd /project/your_username/
+mkdir -p llama-chatbot
+cd llama-chatbot
 conda create -n llama_chat python=3.10 -y
 conda activate llama_chat
 ```
 
-2. Install PyTorch with CUDA 11.8 (adjust if needed)
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
-
-3. Install Hugging Face ecosystem and Gradio
+2. Install Hugging Face ecosystem and Gradio
 pip install -U "transformers>=4.44.0" "accelerate>=0.33.0" "tokenizers>=0.19.0" safetensors gradio
 
 ## Hugging Face Access
@@ -96,7 +96,7 @@ while True:
 2. Run it interactively on a GPU node:
 
 ```
-srun --gres=gpu:1 --cpus-per-task=4 --mem=32G --time=2:00:00 --partition=bigTiger \
+srun --gres=gpu:1 --cpus-per-task=4 --mem=64G --time=2:00:00 --partition=bigTiger \
      python /project/your_username/tutorial/llama-chatbot/llama_chat.py
 ```
 
@@ -182,7 +182,7 @@ demo.launch(server_name="0.0.0.0", server_port=PORT, show_error=True)
 2. Run it on a GPU node
 
 ```
-srun --gres=gpu:1 --cpus-per-task=4 --mem=32G --time=2:00:00 --partition=bigTiger \
+srun --gres=gpu:1 --cpus-per-task=4 --mem=64G --time=2:00:00 --partition=bigTiger \
      python /project/your_username/tutorial/llama-chatbot/llama_gradio.py
 ```
 
