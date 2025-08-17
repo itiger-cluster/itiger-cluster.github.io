@@ -7,12 +7,14 @@ description: run a chatbot, srun
 
 In our [previous tutorial](https://itiger-cluster.github.io/tutorials/2024/run-model/), we covered how to set up the environment and run a classification model using `sbatch`.  
 This time, we will run a **Meta LLaMA 3.1-8B-Instruct** chatbot interactively via `srun` on the cluster.  
-Let's start!
+We will start with a minimal **terminal chatbot**, then upgrade it to a **web interface**.
 
----
+
+
 
 ## Environment Setup
 
+1. Create a conda environment
 Make sure you are working under the `/project` directory (to avoid `/home` quota issues).  
 Then create a dedicated conda environment and install the required libraries:
 
@@ -21,19 +23,20 @@ conda create -n llama_chat python=3.10 -y
 conda activate llama_chat
 ```
 
-### Install PyTorch with CUDA 11.8 (adjust if needed)
+2. Install PyTorch with CUDA 11.8 (adjust if needed)
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
 
-### Install Hugging Face ecosystem and Gradio
+3. Install Hugging Face ecosystem and Gradio
 pip install -U "transformers>=4.44.0" "accelerate>=0.33.0" "tokenizers>=0.19.0" safetensors gradio
 
 ## Hugging Face Access
+
 Meta’s LLaMA models require a license agreement and authentication.
-### Accept the license
+#### Accept the license
 Visit: [meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
 Fill the form and click Submit 
 
-### Create an access token
+#### Create an access token
 1. Log in with your Huggingface account.
 2. Go to Hugging Face [Access Tokens Page](https://huggingface.co/settings/tokens).
 3. Create a read token (hf_...), make sure the Llama-3.1-8B-Instruct model is selected and copy the token.
@@ -45,6 +48,7 @@ The current active token is: `XXX`".
 
 ## Run a Chatbot in your terminal
 
+1. Prepare the script
 
 Save the following script in your prject directory, e.g. `/project/your_username/llama-chatbot/llama_chat.py`:
 
@@ -89,16 +93,16 @@ while True:
     history.append({"role": "assistant", "content": reply})
 ```
 
-Run it interactively on a GPU node:
+2. Run it interactively on a GPU node:
 
 ```
 srun --gres=gpu:1 --cpus-per-task=4 --mem=32G --time=2:00:00 --partition=bigTiger \
      python /project/your_username/tutorial/llama-chatbot/llama_chat.py
 ```
 
-Example Conversations:
+3. Start Conversations:
 
-Once the chatbot starts, you can interact in the terminal:
+Once the chatbot starts, you can interact in the terminal, for example:
 
 ```
 💬 LLaMA Lab Assistant — type 'exit' to quit
