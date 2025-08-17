@@ -200,5 +200,10 @@ Now open a browser on your local machine and go to: `http://localhost:17861`
 
 You should see the LLaMA Lab Assistant Gradio interface, where you can start chatting with the model interactively.
 
-{% include figure.liquid loading="eager" path="assets/img/llama_chatbot.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/llama_chatbot.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
