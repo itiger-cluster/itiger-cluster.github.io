@@ -1,4 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://itiger-cluster.github.io//feed.xml" rel="self" type="application/atom+xml"/><link href="https://itiger-cluster.github.io//" rel="alternate" type="text/html" hreflang="en"/><updated>2025-08-17T00:24:00+00:00</updated><id>https://itiger-cluster.github.io//feed.xml</id><title type="html">iTiger</title><subtitle>Building an HPC to Help the Mid-South. </subtitle><entry><title type="html">How to Run a Text Classification Model</title><link href="https://itiger-cluster.github.io//tutorials/2024/run-model/" rel="alternate" type="text/html" title="How to Run a Text Classification Model"/><published>2024-10-08T15:00:00+00:00</published><updated>2024-10-08T15:00:00+00:00</updated><id>https://itiger-cluster.github.io//tutorials/2024/run-model</id><content type="html" xml:base="https://itiger-cluster.github.io//tutorials/2024/run-model/"><![CDATA[<h2 id="environment-setup">Environment Setup</h2> <h3 id="install-conda-in-the-project-directory">Install Conda in the <code class="language-plaintext highlighter-rouge">/project</code> Directory</h3> <ol> <li>We recommend using <strong>Miniconda</strong> for a lightweight and efficient Python environment setup. To install Miniconda3 in the <code class="language-plaintext highlighter-rouge">/project</code> directory (recommended to avoid the 20 GB storage limitations in <code class="language-plaintext highlighter-rouge">/home</code>), run the following commands:</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p ~/miniconda3
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://itiger-cluster.github.io//feed.xml" rel="self" type="application/atom+xml"/><link href="https://itiger-cluster.github.io//" rel="alternate" type="text/html" hreflang="en"/><updated>2025-08-17T00:25:59+00:00</updated><id>https://itiger-cluster.github.io//feed.xml</id><title type="html">iTiger</title><subtitle>Building an HPC to Help the Mid-South. </subtitle><entry><title type="html">How to Run a LLaMA Chatbot on the Cluster</title><link href="https://itiger-cluster.github.io//tutorials/2025/llama-chatbot/" rel="alternate" type="text/html" title="How to Run a LLaMA Chatbot on the Cluster"/><published>2025-08-16T16:00:00+00:00</published><updated>2025-08-16T16:00:00+00:00</updated><id>https://itiger-cluster.github.io//tutorials/2025/llama-chatbot</id><content type="html" xml:base="https://itiger-cluster.github.io//tutorials/2025/llama-chatbot/"><![CDATA[<p>In our <a href="https://itiger-cluster.github.io/tutorials/2024/run-model/">previous tutorial</a>, we covered how to set up the environment and run a classification model using <code class="language-plaintext highlighter-rouge">sbatch</code>.<br/> This time, we will run a <strong>Meta LLaMA 3.1-8B-Instruct</strong> chatbot interactively via <code class="language-plaintext highlighter-rouge">srun</code> on the cluster.<br/> Let’s start!</p> <hr/> <h2 id="environment-setup">Environment Setup</h2> <p>Make sure you are working under the <code class="language-plaintext highlighter-rouge">/project</code> directory (to avoid <code class="language-plaintext highlighter-rouge">/home</code> quota issues).<br/> Then create a dedicated conda environment and install the required libraries:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-n</span> llama_chat <span class="nv">python</span><span class="o">=</span>3.10 <span class="nt">-y</span>
+conda activate llama_chat
+</code></pre></div></div> <h3 id="install-pytorch-with-cuda-118-adjust-if-needed">Install PyTorch with CUDA 11.8 (adjust if needed)</h3> <p>conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y</p> <h3 id="install-hugging-face-ecosystem-and-gradio">Install Hugging Face ecosystem and Gradio</h3> <p>pip install -U “transformers&gt;=4.44.0” “accelerate&gt;=0.33.0” “tokenizers&gt;=0.19.0” safetensors gradio</p> <h2 id="hugging-face-access">Hugging Face Access</h2> <p>Meta’s LLaMA models require a license agreement and authentication.</p> <h3 id="accept-the-license">Accept the license</h3> <p>Visit: <a href="https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct">meta-llama/Llama-3.1-8B-Instruct</a> Fill the form and click Submit</p> <h3 id="create-an-access-token">Create an access token</h3> <ol> <li>Log in with your Huggingface account.</li> <li>Go to Hugging Face <a href="https://huggingface.co/settings/tokens">Access Tokens Page</a>.</li> <li>Create a read token (hf_…), make sure the Llama-3.1-8B-Instruct model is selected and copy the token.</li> <li>Log in on the cluster <code class="language-plaintext highlighter-rouge">huggingface-cli login</code> Paste your token when prompted. You should see: “Login successful. The current active token is: <code class="language-plaintext highlighter-rouge">XXX</code>”.</li> </ol> <h2 id="run-a-chatbot-in-your-terminal">Run a Chatbot in your terminal</h2> <p>Save the following script in your prject directory, e.g. <code class="language-plaintext highlighter-rouge">/project/your_username/llama-chatbot/llama_chat.py</code>:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from transformers import AutoTokenizer, AutoModelForCausalLM
+import torch, sys
+
+MODEL_ID = "meta-llama/Llama-3.1-8B-Instruct"
+
+tok = AutoTokenizer.from_pretrained(MODEL_ID, use_auth_token=True)
+mdl = AutoModelForCausalLM.from_pretrained(
+    MODEL_ID,
+    torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+    device_map="auto",
+    attn_implementation="sdpa",
+    use_auth_token=True,
+)
+
+print("💬 LLaMA Lab Assistant — type 'exit' to quit")
+history = []
+while True:
+    user = input("You: ").strip()
+    if user.lower() == "exit":
+        sys.exit(0)
+
+    messages = history + [{"role": "user", "content": user}]
+    prompt = tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    inputs = tok(prompt, return_tensors="pt").to(mdl.device)
+
+    with torch.no_grad():
+        out = mdl.generate(
+            **inputs,
+            max_new_tokens=256,
+            temperature=0.7,
+            do_sample=True,
+            eos_token_id=tok.eos_token_id,
+        )
+    text = tok.decode(out[0], skip_special_tokens=True)
+    reply = text.split(prompt, 1)[-1].strip()
+    print(reply)
+    history.append({"role": "user", "content": user})
+    history.append({"role": "assistant", "content": reply})
+</code></pre></div></div> <p>Run it interactively on a GPU node:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>srun --gres=gpu:1 --cpus-per-task=4 --mem=32G --time=2:00:00 --partition=bigTiger \
+     python /project/your_username/tutorial/llama-chatbot/llama_chat.py
+</code></pre></div></div> <p>Example Conversations:</p> <p>Once the chatbot starts, you can interact in the terminal:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>💬 LLaMA Lab Assistant — type 'exit' to quit
+
+You: Can you explain what a GPU is?
+Assistant: A Graphics Processing Unit (GPU) is a specialized electronic circuit designed to quickly manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display device...
+
+exit
+</code></pre></div></div> <h2 id="upgrade-to-a-web-interface-gradio">Upgrade to a Web Interface (Gradio)</h2> <p>For a more user-friendly interface, we can use Gradio to run the chatbot in a browser.</p> <ol> <li>Prepare the script</li> </ol> <p>Save this script as /project/your_username/tutorial/llama-chatbot/llama_gradio.py, and <strong>change line 6</strong> to your actual directory:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os, socket, gradio as gr
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import torch
+
+# Put HF cache under /project to avoid home quota and deprecation warning
+os.environ.setdefault("HF_HOME", "/your_username/wliu9/.cache/huggingface")
+
+MODEL_ID = "meta-llama/Llama-3.1-8B-Instruct"
+PORT = 7861  # change if the port is busy
+
+# You already did `huggingface-cli login`, no explicit token needed here
+tok = AutoTokenizer.from_pretrained(MODEL_ID)
+mdl = AutoModelForCausalLM.from_pretrained(
+    MODEL_ID,
+    torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+    device_map="auto",
+    attn_implementation="sdpa",
+)
+
+def chat_fn(message, history):
+    """
+    Gradio passes:
+      - message: current user input (str)
+      - history: list of (user, assistant) tuples
+    Convert to LLaMA chat template messages.
+    """
+    msgs = []
+    for u, b in (history or []):
+        if u:
+            msgs.append({"role": "user", "content": u})
+        if b:
+            msgs.append({"role": "assistant", "content": b})
+    msgs.append({"role": "user", "content": message})
+
+    prompt = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+    inputs = tok(prompt, return_tensors="pt").to(mdl.device)
+
+    with torch.no_grad():
+        out = mdl.generate(
+            **inputs,
+            max_new_tokens=256,
+            temperature=0.7,
+            do_sample=True,
+            eos_token_id=tok.eos_token_id,
+        )
+
+    text = tok.decode(out[0], skip_special_tokens=True)
+    reply = text.split("assistant\n", 1)[-1].strip()
+    return reply
+
+print(f"[Gradio] compute node = {socket.gethostname()}, port = {PORT}", flush=True)
+
+demo = gr.ChatInterface(fn=chat_fn, title="LLaMA Lab Assistant")
+demo.launch(server_name="0.0.0.0", server_port=PORT, show_error=True)
+
+</code></pre></div></div> <ol> <li>Run it on a GPU node</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>srun --gres=gpu:1 --cpus-per-task=4 --mem=32G --time=2:00:00 --partition=bigTiger \
+     python /project/your_username/tutorial/llama-chatbot/llama_gradio.py
+</code></pre></div></div> <p>This will start the LLaMA chatbot on a GPU node. In the terminal you should see output like:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Gradio] compute node = itiger01, port = 7861
+Running on local URL:  http://0.0.0.0:7861
+</code></pre></div></div> <ol> <li>Connect from your local machine</li> </ol> <p>Open a new terminal on your local computer and create an SSH tunnel. Replace <code class="language-plaintext highlighter-rouge">itiger01</code> with the actual compute node name printed above, and and <code class="language-plaintext highlighter-rouge">you_username</code> as your actual username:</p> <p><code class="language-plaintext highlighter-rouge">ssh -Nf -L 17861:itiger01:7861 you_username@itiger.memphis.edu</code></p> <p>Now open a browser on your local machine and go to: <code class="language-plaintext highlighter-rouge">http://localhost:17861</code></p> <p>You should see the LLaMA Lab Assistant Gradio interface, where you can start chatting with the model interactively.</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/llama_chatbot-480.webp 480w,/assets/img/llama_chatbot-800.webp 800w,/assets/img/llama_chatbot-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/llama_chatbot.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure>]]></content><author><name></name></author><summary type="html"><![CDATA[run a chatbot, srun]]></summary></entry><entry><title type="html">How to Run a Text Classification Model</title><link href="https://itiger-cluster.github.io//tutorials/2024/run-model/" rel="alternate" type="text/html" title="How to Run a Text Classification Model"/><published>2024-10-08T15:00:00+00:00</published><updated>2024-10-08T15:00:00+00:00</updated><id>https://itiger-cluster.github.io//tutorials/2024/run-model</id><content type="html" xml:base="https://itiger-cluster.github.io//tutorials/2024/run-model/"><![CDATA[<h2 id="environment-setup">Environment Setup</h2> <h3 id="install-conda-in-the-project-directory">Install Conda in the <code class="language-plaintext highlighter-rouge">/project</code> Directory</h3> <ol> <li>We recommend using <strong>Miniconda</strong> for a lightweight and efficient Python environment setup. To install Miniconda3 in the <code class="language-plaintext highlighter-rouge">/project</code> directory (recommended to avoid the 20 GB storage limitations in <code class="language-plaintext highlighter-rouge">/home</code>), run the following commands:</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm ~/miniconda3/miniconda.sh
