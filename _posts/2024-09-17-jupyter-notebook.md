@@ -113,7 +113,7 @@ Once running, you should see a new .out file. Open it up, and you should see som
 
 Now that we have the instance running, we need to be able to view it on a browser tab, since if you try to use the link on a normal browser, it will not work, since we need specialized access.
 
-The most convenient way to view your instances is through connecting to the cluster with X2go. To install X2go, simply download the version applicable to your device from [this link]("https://wiki.x2go.org/doku.php"). Once you do that, open up the application, and enter in the required parameters similar to the picture below. This is for the new session we will create. Make SURE to change the bottom parameter from the initial `KDE` to the `XFCE` option.
+The most convenient way to view your instances is through connecting to the cluster with X2go. To install X2go, simply download the version applicable to your device from [this link](https://wiki.x2go.org/doku.php). Once you do that, open up the application, and enter in the required parameters similar to the picture below. This is for the new session we will create. Make SURE to change the bottom parameter from the initial `KDE` to the `XFCE` option.
 
 
  
