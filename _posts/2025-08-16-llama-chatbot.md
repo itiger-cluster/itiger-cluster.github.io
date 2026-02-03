@@ -119,7 +119,7 @@ For a more user-friendly interface, we can use Gradio to run the chatbot in a br
 
 1. Prepare the script
 
-Save this script as /project/your_username/tutorial/llama-chatbot/llama_gradio.py, and **change line 6** to your actual directory:
+Save this script as /project/your_username/tutorial/llama-chatbot/llama_gradio.py, and **change line 6** to your actual directory (`your_username`) and PORT number to a four digit number you like and larger than 1024 (`your_4_digits_number`):
 
 ```
 import os, socket, gradio as gr
@@ -127,10 +127,10 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
 # Put HF cache under /project to avoid home quota and deprecation warning
-os.environ.setdefault("HF_HOME", "/your_username/wliu9/.cache/huggingface")
+os.environ.setdefault("HF_HOME", "project/your_username/.cache/huggingface")
 
 MODEL_ID = "meta-llama/Llama-3.1-8B-Instruct"
-PORT = 7861  # change if the port is busy
+PORT = your_4_digits_number  # change if the port is busy
 
 # You already did `huggingface-cli login`, no explicit token needed here
 tok = AutoTokenizer.from_pretrained(MODEL_ID)
@@ -189,18 +189,23 @@ srun --gres=gpu:1 --cpus-per-task=4 --mem=64G --time=2:00:00 --partition=bigTige
 This will start the LLaMA chatbot on a GPU node. In the terminal you should see output like:
 
 ```
-[Gradio] compute node = itiger01, port = 7861
-Running on local URL:  http://0.0.0.0:7861
+[Gradio] compute node = itiger06, port = xxxx
+Running on local URL:  http://0.0.0.0:xxxx
 ```
+
+xxxx (`your_4_digits_number` in the script) is the PORT number you choose before.
+
 
 3. Connect from your local machine
 
 Open a new terminal on your local computer and create an SSH tunnel.
-Replace `itiger01` with the actual compute node name printed above, and and `you_username` as your actual username:
+Replace `NODE` with the actual compute node name printed above e.g. `itiger06`, and and `you_username` as your actual username:
 
-```ssh -Nf -L 17861:itiger01:7861 you_username@itiger.memphis.edu```
+```ssh -Nf -L LOCAL_PORT:NODE:REMOTE_PORT you_username@itiger.memphis.edu```
 
-Now open a browser on your local machine and go to: `http://localhost:17861`
+REMOTE_PORT is the PORT number you choose before (`your_4_digits_number` in the script), and you may choose the same or another number as LOCAL_PORT as long as it's not occupied on your local machine.
+
+Now open a browser on your local machine and go to: `http://localhost:LOCAL_PORT`
 
 You should see the LLaMA Lab Assistant Gradio interface, where you can start chatting with the model interactively.
 
