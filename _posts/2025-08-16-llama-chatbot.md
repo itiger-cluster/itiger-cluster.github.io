@@ -27,7 +27,8 @@ conda activate llama_chat
 ```
 
 2. Install Hugging Face ecosystem and Gradio
-pip install -U "transformers>=4.44.0" "accelerate>=0.33.0" "tokenizers>=0.19.0" safetensors gradio
+   
+`pip install -U "transformers>=4.44.0" "accelerate>=0.33.0" "tokenizers>=0.19.0" safetensors gradio`
 
 ## Hugging Face Access
 
