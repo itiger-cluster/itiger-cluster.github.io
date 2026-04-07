@@ -54,42 +54,57 @@ The current active token is: `XXX`".
 Save the following script in your prject directory, e.g. `/project/your_username/llama-chatbot/llama_chat.py`:
 
 ```
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch, sys
+from transformers import AutoTokenizer, AutoModelForCausalLM, logging
+import torch
+import sys
+logging.set_verbosity_error()
 
 MODEL_ID = "meta-llama/Llama-3.1-8B-Instruct"
 
-tok = AutoTokenizer.from_pretrained(MODEL_ID, use_auth_token=True)
+tok = AutoTokenizer.from_pretrained(MODEL_ID)
+tok.pad_token = tok.eos_token  # avoid pad_token_id warning
+
 mdl = AutoModelForCausalLM.from_pretrained(
     MODEL_ID,
     torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
     device_map="auto",
     attn_implementation="sdpa",
-    use_auth_token=True,
 )
 
 print("💬 LLaMA Lab Assistant — type 'exit' to quit")
+
 history = []
+
 while True:
-    user = input("You: ").strip()
+    user = input("").strip()
     if user.lower() == "exit":
         sys.exit(0)
 
     messages = history + [{"role": "user", "content": user}]
-    prompt = tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    inputs = tok(prompt, return_tensors="pt").to(mdl.device)
+
+    inputs = tok.apply_chat_template(
+        messages,
+        add_generation_prompt=True,
+        return_tensors="pt",
+        return_dict=True,
+    ).to(mdl.device)
 
     with torch.no_grad():
-        out = mdl.generate(
+        output = mdl.generate(
             **inputs,
             max_new_tokens=256,
             temperature=0.7,
             do_sample=True,
+            pad_token_id=tok.eos_token_id,
             eos_token_id=tok.eos_token_id,
         )
-    text = tok.decode(out[0], skip_special_tokens=True)
-    reply = text.split(prompt, 1)[-1].strip()
-    print(reply)
+
+    
+    generated_tokens = output[0][inputs["input_ids"].shape[-1]:]
+    reply = tok.decode(generated_tokens, skip_special_tokens=True).strip()
+
+    print(f"Assistant: {reply}\n")
+
     history.append({"role": "user", "content": user})
     history.append({"role": "assistant", "content": reply})
 ```
@@ -108,7 +123,7 @@ Once the chatbot starts, you can interact in the terminal, for example:
 ```
 💬 LLaMA Lab Assistant — type 'exit' to quit
 
-You: Can you explain what a GPU is?
+Can you explain what a GPU is?
 Assistant: A Graphics Processing Unit (GPU) is a specialized electronic circuit designed to quickly manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display device...
 
 exit
