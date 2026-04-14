@@ -1,0 +1,8 @@
+---
+layout: post
+date: 2026-4-13 15:59:00-0400
+inline: true
+related_posts: false
+---
+New tutorial available: **Run a Qwen3 Chatbot on the Cluster** — learn how to launch open-weight Qwen3 model interactively with Gradio on iTiger. No access token needed.
+[Read it here »](https://itiger-cluster.github.io/tutorials/2025/qwen-chatbot/)
