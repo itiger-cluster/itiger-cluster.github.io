@@ -42,8 +42,8 @@ pip install -U "transformers>=4.51.0" "accelerate>=0.33.0" "tokenizers>=0.19.0" 
 
 That's it for setup. Since Qwen3-8B is not a gated model, no Hugging Face login or access token is required.
 
-> **Note**: If you see a warning like `CUDA initialization: The NVIDIA driver on your system is too old`, it means the default PyTorch ships a newer CUDA version than the cluster driver currently supports. In that case, reinstall PyTorch with a matching CUDA version, e.g.:  
-> `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`
+> **Note**: If you see a warning like `CUDA initialization: The NVIDIA driver on your system is too old`, it means the default PyTorch ships a newer CUDA version than the cluster driver currently supports. PyTorch will silently fall back to CPU, making inference extremely slow (minutes instead of seconds). To fix this, reinstall PyTorch with a compatible CUDA version::  
+> `pip install torch==2.6.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`
 
 
 ## Run a Chatbot in your terminal
@@ -142,28 +142,27 @@ import torch
 os.environ.setdefault("HF_HOME", "/project/your_username/.cache/huggingface")
 
 MODEL_ID = "Qwen/Qwen3-8B"
-PORT = your_4_digits_number  # change if the port is busy
+PORT = 1111  # change if the port is busy
 
 tok = AutoTokenizer.from_pretrained(MODEL_ID)
+
 mdl = AutoModelForCausalLM.from_pretrained(
     MODEL_ID,
-    torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+    dtype=torch.bfloat16,
     device_map="auto",
 )
 
 def chat_fn(message, history):
-    """
-    Gradio passes:
-      - message: current user input (str)
-      - history: list of (user, assistant) tuples
-    Convert to Qwen3 chat template messages.
-    """
     msgs = []
-    for u, b in (history or []):
-        if u:
-            msgs.append({"role": "user", "content": u})
-        if b:
-            msgs.append({"role": "assistant", "content": b})
+    for item in (history or []):
+        if isinstance(item, dict):
+            msgs.append(item)
+        elif isinstance(item, (list, tuple)) and len(item) == 2:
+            u, b = item
+            if u:
+                msgs.append({"role": "user", "content": u})
+            if b:
+                msgs.append({"role": "assistant", "content": b})
     msgs.append({"role": "user", "content": message})
 
     text = tok.apply_chat_template(
