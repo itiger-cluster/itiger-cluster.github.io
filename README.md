@@ -14,7 +14,8 @@
 - [User Manual](https://itiger-cluster.github.io/blog/)
 
 ### Notable Contributors
-+ Dr. Xiaolei Huang (PI)
++ Dr. Haomiao Ni (PI)
++ Dr. Xiaolei Huang (Former Member)
 + Dr. Ana Doblas(Co-PI)
 + Dr. Santosh Kumar (Co-PI)
 + Dr. Duane Mckenna (Co-PI)
