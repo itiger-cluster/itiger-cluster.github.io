@@ -6,4 +6,4 @@ description:
 ---
 
 
-Please contact xiaolei.huang@memphis.edu if you need a facility description of the iTiger cluster for your grant application.
+Please contact hni@memphis.edu if you need a facility description of the iTiger cluster for your grant application.
