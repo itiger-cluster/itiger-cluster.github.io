@@ -88,7 +88,7 @@ Now, type in `jupyter notebook` into the file. save it, then submit it with `sba
 #SBATCH --mem=10G
 #SBATCH --time=1-00:00:00
 #SBATCH --gres=gpu:1
-#SBATCH --partition=agpuq
+#SBATCH --partition=bigTiger
 
 #module load nvhpc/23.11
 #module load cuda/12.3
