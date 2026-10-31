@@ -5,7 +5,7 @@ date: 2025-08-16 16:00:00
 description: run a chatbot, srun  
 ---
 
-In our [previous chatbot tutorial](https://itiger-cluster.github.io/tutorials/2025/llama-chatbot/), we ran a **Meta LLaMA 3.1-8B-Instruct** chatbot on the cluster. LLaMA is a *gated* model, meaning you need to accept a license agreement and set up a Hugging Face access token before downloading it.
+In our [previous chatbot tutorial]({% post_url 2025-08-16-llama-chatbot %}), we ran a **Meta LLaMA 3.1-8B-Instruct** chatbot on the cluster. LLaMA is a *gated* model, meaning you need to accept a license agreement and set up a Hugging Face access token before downloading it.
 
 This time, we will use **Qwen3-8B**, an open-weight model released by Alibaba under the Apache 2.0 license. **No access token or license agreement is needed** — you can download and run it directly. Qwen3 also supports seamless switching between a "thinking" mode (for complex reasoning) and a "non-thinking" mode (for general chat).
 
@@ -13,7 +13,7 @@ We will start with a minimal **terminal chatbot**, then upgrade it to a **web in
 
 #### Prerequisites
 
-This tutorial assumes you already have **conda** (Miniconda or Anaconda) installed on the cluster. If you haven't set it up yet, follow the instructions in our [first tutorial](https://itiger-cluster.github.io/tutorials/2024/run-model/) which covers how to download and configure Miniconda.
+This tutorial assumes you already have **conda** (Miniconda or Anaconda) installed on the cluster. If you haven't set it up yet, follow the instructions in our [first tutorial]({% post_url 2024-10-08-run-model %}) which covers how to download and configure Miniconda.
 
 
 ## Environment Setup

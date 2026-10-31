@@ -5,7 +5,7 @@ date: 2025-08-16 16:00:00
 description: run a chatbot, srun  
 ---
 
-In our [previous tutorial](https://itiger-cluster.github.io/tutorials/2024/run-model/), we covered how to set up the environment and run a classification model using `sbatch`.  
+In our [previous tutorial]({% post_url 2024-10-08-run-model %}), we covered how to set up the environment and run a classification model using `sbatch`.  
 This time, we will run a **Meta LLaMA 3.1-8B-Instruct** chatbot interactively via `srun` on the cluster.  
 We will start with a minimal **terminal chatbot**, then upgrade it to a **web interface**.
 
