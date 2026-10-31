@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: HPC Tutorials
 nav: false
 pagination:
   enabled: true
