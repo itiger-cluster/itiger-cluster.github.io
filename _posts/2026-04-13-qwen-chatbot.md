@@ -50,9 +50,14 @@ That's it for setup. Since Qwen3-8B is not a gated model, no Hugging Face login 
 
 1. Prepare the script
 
-Save the following script in your project directory, e.g. `/project/your_username/qwen-chatbot/qwen_chat.py`:
+Save the following script in your project directory, e.g. `/project/your_username/qwen-chatbot/qwen_chat.py`, and replace `your_username` in the `HF_HOME` line with your actual username:
 
 ```python
+import os
+# Put the Hugging Face cache under /project to avoid home quota.
+# This must run BEFORE importing transformers, otherwise it has no effect.
+os.environ.setdefault("HF_HOME", "/project/your_username/.cache/huggingface")
+
 from transformers import AutoTokenizer, AutoModelForCausalLM, logging
 import torch
 import sys
@@ -131,24 +136,27 @@ For a more user-friendly interface, we can use Gradio to run the chatbot in a br
 
 1. Prepare the script
 
-Save this script as `/project/your_username/qwen-chatbot/qwen_gradio.py`, and **change line 5** to your actual directory (`your_username`) and PORT number to a four digit number you like and larger than 1024 (`your_4_digits_number`):
+Save this script as `/project/your_username/qwen-chatbot/qwen_gradio.py`, then **edit two values**: replace `your_username` in the `HF_HOME` line with your actual username, and set `PORT` to a four-digit number of your choice larger than 1024 (pick another one if it is busy):
 
 ```python
-import os, socket, gradio as gr
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
-
-# Put HF cache under /project to avoid home quota
+import os
+# Put the Hugging Face cache under /project to avoid home quota.
+# This must run BEFORE importing transformers, otherwise it has no effect.
 os.environ.setdefault("HF_HOME", "/project/your_username/.cache/huggingface")
 
+import socket
+import gradio as gr
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
 MODEL_ID = "Qwen/Qwen3-8B"
-PORT = 1111  # change if the port is busy
+PORT = 1111  # change to your own four-digit number (> 1024)
 
 tok = AutoTokenizer.from_pretrained(MODEL_ID)
 
 mdl = AutoModelForCausalLM.from_pretrained(
     MODEL_ID,
-    dtype=torch.bfloat16,
+    torch_dtype=torch.bfloat16,
     device_map="auto",
 )
 
@@ -205,7 +213,7 @@ This will start the Qwen3 chatbot on a GPU node. In the terminal you should see 
 Running on local URL:  http://0.0.0.0:xxxx
 ```
 
-xxxx (`your_4_digits_number` in the script) is the PORT number you chose before.
+xxxx is the `PORT` number you set in the script.
 
 
 3. Connect from your local machine
@@ -217,7 +225,7 @@ Replace `NODE` with the actual compute node name printed above e.g. `itiger06`, 
 ssh -Nf -L LOCAL_PORT:NODE:REMOTE_PORT your_username@itiger.memphis.edu
 ```
 
-REMOTE_PORT is the PORT number you chose before (`your_4_digits_number` in the script), and you may choose the same or another number as LOCAL_PORT as long as it's not occupied on your local machine.
+REMOTE_PORT is the `PORT` number you set in the script, and you may choose the same or another number as LOCAL_PORT as long as it's not occupied on your local machine.
 
 Now open a browser on your local machine and go to: `http://localhost:LOCAL_PORT`
 
