@@ -6,6 +6,4 @@ description:
 
 ---
 
-<!-- _pages/publications.md -->
-
 More to be added later!

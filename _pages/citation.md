@@ -20,8 +20,6 @@ description:
 
 
 
-<!-- _pages/publications.md -->
-
 Below is our BibTeX citation for you to cite our paper:
 
 <pre>
