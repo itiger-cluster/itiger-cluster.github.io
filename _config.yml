@@ -203,6 +203,16 @@ kramdown:
 include: ["_pages"]
 exclude:
   - bin
+  # al-folio template demo content (not part of the iTiger site)
+  - _pages/cv.md
+  - _pages/projects.md
+  - _pages/teaching.md
+  - _pages/repositories.md
+  - _projects
+  - archive
+  - lighthouse_results
+  # profile snippets (unused; would be copied to /_pages/ as raw .md files)
+  - _pages/about_*.md
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - docker-compose.yml

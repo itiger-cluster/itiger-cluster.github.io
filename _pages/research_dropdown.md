@@ -1,4 +1,5 @@
 ---
+sitemap: false # nav-only page: exists to define a dropdown menu
 layout: page
 title: Research Initiative
 nav: true
