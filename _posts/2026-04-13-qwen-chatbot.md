@@ -1,8 +1,8 @@
 ---
 layout: post
 title: How to Run a Qwen3 Chatbot on the Cluster
-date: 2025-08-16 16:00:00
-description: run a chatbot, srun  
+date: 2026-04-13 16:00:00
+description: run an open-weight Qwen3 chatbot with Gradio, no access token needed
 ---
 
 In our [previous chatbot tutorial](https://itiger-cluster.github.io/tutorials/2025/llama-chatbot/), we ran a **Meta LLaMA 3.1-8B-Instruct** chatbot on the cluster. LLaMA is a *gated* model, meaning you need to accept a license agreement and set up a Hugging Face access token before downloading it.
