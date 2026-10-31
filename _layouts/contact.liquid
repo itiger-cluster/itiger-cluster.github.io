@@ -8,30 +8,34 @@ layout: default
   </header>
 
   <div class="container">
-		<form action="https://formsubmit.co/b422fa064a67263838aaa24d6bc0b8d4" method="POST">
-		  <div class="form-group">
-		    <label for="FullNameInput">Full Name</label>
-		    <input type="text" name="Name" class="form-control" id="FullNameInput" placeholder="Enter your full name">
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputEmail1">Email address</label>
-		    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-		  </div>
-		  <div class="form-group">
-    		<label for="exampleFormControlTextarea1">Enter Your Message Here</label>
-    		<textarea class="form-control" name="message" id="Textarea1" rows="3"></textarea>
-  		  </div>
-		  <button type="submit" onclick="alert('Before submitting, have you checked our Wiki?')" class="btn btn-primary">Submit</button>
-		</form>
-	</div>
+    <p>
+      Before writing to us, please check whether your question is answered in our
+      <a href="{{ '/wiki/' | relative_url }}">Wiki</a> or <a href="{{ '/blog/' | relative_url }}">HPC Tutorials</a>.
+    </p>
+    <form
+      action="https://formsubmit.co/b422fa064a67263838aaa24d6bc0b8d4"
+      method="POST"
+      onsubmit="return confirm('Before submitting, have you checked our Wiki?');"
+    >
+      <div class="form-group">
+        <label for="contact-name">Full Name</label>
+        <input type="text" name="Name" class="form-control" id="contact-name" placeholder="Enter your full name" autocomplete="name" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email address</label>
+        <input type="email" name="email" class="form-control" id="contact-email" placeholder="Enter email" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Enter Your Message Here</label>
+        <textarea class="form-control" name="message" id="contact-message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 
   <article>
     {{ content }}
   </article>
-
-<script>
-
-</script>
 
 {% if page.related_publications %}
     <h2>References</h2>
