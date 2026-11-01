@@ -54,6 +54,14 @@ on:
 permissions:
   contents: write
 
+# Run deploys of the same branch one at a time, in order. When several PRs
+# are merged in quick succession, an older run could otherwise finish last and
+# overwrite gh-pages with a stale build. With cancel-in-progress: false the
+# running deploy completes, and only the newest queued run starts after it.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   deploy:
     # available images: https://github.com/actions/runner-images#available-images
