@@ -27,6 +27,8 @@ of cutting-edge AI and data science methodologies.
 Explore iTiger, join us in pushing the boundaries of research and education,
 and contribute to the future of technology.
 
+Running into problems? Check the [troubleshooting tips]({{ '/contact/#troubleshooting' | relative_url }}) on our Contact page, which cover common connection, login and account issues, or browse our [HPC Tutorials]({{ '/blog/' | relative_url }}) and [Wiki]({% link _pages/qanda.md %}) for step-by-step guides.
+
 
 ## Citation
 
