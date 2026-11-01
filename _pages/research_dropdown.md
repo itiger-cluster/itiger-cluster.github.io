@@ -12,9 +12,6 @@ children:
   - title: Citation
     permalink: /citation/
   - title: divider
-  - title: Publication List
-    permalink: /publication-list/
-  - title: divider
   - title: Report Publication
     permalink: /report-publication/
 ---
